@@ -17,7 +17,7 @@ function generatePassword() {
     const length = +lengthEl.value;
 
     let chars = lowercase;
-    let firstChars = lowercase + numbers; // first char allowed set
+    let firstChars = lowercase ; // first char allowed set
     let password = '';
 
     // Include options
@@ -34,10 +34,10 @@ function generatePassword() {
         chars += symbols;
     }
 
-    // ✅ First character (only alphabet or number)
+    // First character (only alphabet )
     password += firstChars[Math.floor(Math.random() * firstChars.length)];
 
-    // ✅ Remaining characters
+    // Remaining characters
     for (let i = 1; i < length; i++) {
         password += chars[Math.floor(Math.random() * chars.length)];
     }
